@@ -2,9 +2,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 
+##Add node packages
+
+Run `npm install` in the terminal to install all packages required for the project to run.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+##Mongodb add ip address
+
+To access all data we need to add current ip addresss and make it active.
 
 ## Code scaffolding
 
