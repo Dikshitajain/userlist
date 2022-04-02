@@ -1,0 +1,48 @@
+<div class="container">
+    <hr>
+<mat-card>
+    <form (submit)="onuserSubmit()" [formGroup]="form">
+      <mat-form-field>
+        <input matInput
+        type="text"
+        placeholder="Enter Username"
+        name="username"
+        formControlName="username">
+        <mat-error *ngIf="form.get('username').invalid">Enter Name</mat-error>
+      </mat-form-field><br>
+      <mat-form-field>
+        <input matInput
+        placeholder="Enter Email"
+        rows="6"
+        name="email"
+        formControlName="email">
+        <mat-error *ngIf="form.get('email').invalid">Enter Email</mat-error>
+      </mat-form-field><br>
+      <mat-form-field appearance="fill">
+        <mat-label>Select Role</mat-label>
+        <mat-select formControlName="role">
+          <mat-option value="Admin">Admin</mat-option>
+          <mat-option value="Subscriber">Subscriber</mat-option>
+          <mat-option value="Editor">Editor</mat-option>
+          <mat-option value="Writer">Writer</mat-option>
+          <mat-option value="Publisher">Publisher</mat-option> 
+          <mat-option value="Reviewer">Reviewer</mat-option> 
+        </mat-select>
+      </mat-form-field><br>
+      <mat-form-field appearance="fill">
+        <mat-label>Select</mat-label>
+        <mat-select formControlName="region">
+          <mat-option value="Ahmedabad">Ahmedabad</mat-option>
+          <mat-option value="Rajkot">Rajkot</mat-option>
+          <mat-option value="Surat">Surat</mat-option>
+          <mat-option value="Vadodara">Vadodara</mat-option>
+          <mat-option value="Anand">Anand</mat-option>
+          <mat-option value="Nadiad">Nadiad</mat-option>
+        </mat-select>
+      </mat-form-field><br>
+      <button type="submit" mat-raised-button color="primary">Save</button>
+    </form>
+  </mat-card>
+</div>  
+  
+  

@@ -1,0 +1,39 @@
+<hr>
+<div class="container">
+    <mat-form-field appearance="fill">
+        <mat-label>Select Role</mat-label>
+        <mat-select [(value)]="selectedrole">
+          <mat-option value="Admin">Admin</mat-option>
+          <mat-option value="Subscriber">Subscriber</mat-option>
+          <mat-option value="Editor">Editor</mat-option>
+          <mat-option value="Writer">Writer</mat-option>
+          <mat-option value="Publisher">Publisher</mat-option> 
+          <mat-option value="Reviewer">Reviewer</mat-option> 
+        </mat-select>
+      </mat-form-field><br>
+      <mat-form-field appearance="fill">
+        <mat-label>Select</mat-label>
+        <mat-select [(value)]="selectedregion">
+          <mat-option value="Ahmedabad">Ahmedabad</mat-option>
+          <mat-option value="Rajkot">Rajkot</mat-option>
+          <mat-option value="Surat">Surat</mat-option>
+          <mat-option value="Vadodara">Vadodara</mat-option>
+          <mat-option value="Anand">Anand</mat-option>
+          <mat-option value="Nadiad">Nadiad</mat-option>
+        </mat-select>
+      </mat-form-field><br>
+<table>
+    <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Region</th>
+    </tr>
+    <tr *ngFor="let user of user.users | filter:selectedrole:'role' | filter:selectedregion:'region'">
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.role}}</td>
+        <td>{{user.region}}</td>
+    </tr>
+</table>
+</div>
